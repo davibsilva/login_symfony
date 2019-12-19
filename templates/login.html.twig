@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tela de Login{% endblock %}
+{% block jquery %}
+    <script src="{{ asset(jquery) }}"></script>
+{% endblock %}  
+{% block css %}
+    <link rel="stylesheet" href="{{ asset(loginCss) }}">
+{% endblock %}  
+{% block body %}
+    <div id="login_canvas">
+        <form id ="loginForm" action="/login/autentication" method="POST">
+            <div id="company_icon">
+                <img id="logo" src="{{ asset(logoParanoid) }}" alt="" height="80px">
+            </div>
+            <div  id="loadDiv"><img style="display: none;" id="load" src="{{ asset(loadGif) }}" width="90px" height="75px"></div>
+            <div style="display: none;" id="error_message">
+                <p id="success_message" ></p>
+                
+            </div>
+            <div id="user">
+                <input name="login" id="user_field" type="text" class="login_form" placeholder="Usuário" size="25">
+            </div>
+            <div id="password">
+                <input name="password" id="password_field" type="password" class="login_form" placeholder="Senha" size="25">
+            </div>
+            <div id="code">
+                <input style="display: none;" id="code_field" class="login_form" name="code" type="text">
+            </div>
+            <div id="login">
+                <button type="button" id="submit">Login</button>
+            </div>
+            <span style="color: red;" id="search">
+                <a id="slink" href="/register/show">Cadastre-se</a>
+            </span>      
+        </form>
+    </div>           
+    
+                
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset(ajaxJs) }}"></script>
+{% endblock %}
+{# 
+<div id="login_canvas">
+        
+    </div> #}

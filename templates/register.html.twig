@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block jquery %}
+<script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('/css/register.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div id="register_canvas">
+        <h4 id="title"> Cadastro</h4>
+        <div id="field_block">
+            <div class="input_field">
+                <label class="field_label">Usuário:</label> <input id="user_field" type="text">
+            </div>
+            <div class="input_field"> 
+                <label class="field_label">E-mail:</label> <input class="field" type="text">
+            </div>
+            <div class="input_field">
+                <label class="field_label">Senha:</label> <input class="field" type="text">
+            </div>
+            <div class="input_field"> 
+                <button type="button">Cadastrar</button>
+            </div>
+        </div
+    </div>
+    
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% block javascripts %}
+<script src="{{ asset('/js/register.js') }}" >  </script>
+{% endblock %}

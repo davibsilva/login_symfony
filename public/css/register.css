@@ -1,0 +1,31 @@
+#register_canvas {
+    margin-top: 5%;
+    margin-left: 33%;
+    margin-right: 33%;
+    width: 33%;
+    height: 400px;
+    background-color: #BDBDBD;
+}
+
+#title {
+    padding: 5% 0 0 33%;
+    font-weight: bold;
+    color: #F5F5F5;
+}
+
+.input_field {
+    padding: 5% 0 0 10%;
+}
+
+.field {
+    margin-left: 6%;
+}
+
+.field_label {
+    color:#F5F5F5;
+    font-weight: bold;
+}
+
+#user_field {
+    margin-left: 3%;
+}

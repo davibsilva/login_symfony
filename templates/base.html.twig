@@ -3,10 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+
+            <link href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') }}"  rel="stylesheet" >
+            <link href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans&display=swap') }}" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') }}">
+            
+            {% block css %}            
+                <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
+            {% endblock %}
+
+            {% block jquery %}
+
+            {% endblock %}
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <header>
+            <img id="logo_header" src="{{ asset('/img/logoAdmin_paranoid.png') }}" alt="">
+            <div id="nav">
+                <ul>
+                    <li><a href="/home/show">Home</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a id="login_link" href="/login/show">Login/Cadastro</a></li>
+                    <span id="clock"> </span>
+                    
+                </ul>
+            </div>
+            
+           
+        </header>
+        {% block body %}
+
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('/js/index.js') }}"> </script>
+        {% endblock %}
     </body>
+
 </html>
